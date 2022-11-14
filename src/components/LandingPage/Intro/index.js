@@ -42,7 +42,7 @@ function LandingIntro() {
           <Button text="Share" outlined={true} />
         </motion.div>
       </div>
-      <PhoneComponent />
+      {/* <PhoneComponent /> */}
     </div>
   );
 }
