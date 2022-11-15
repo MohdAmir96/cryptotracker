@@ -3,6 +3,7 @@ import Button from "../../Common/Button/Button";
 import "./styles.css";
 import { motion } from "framer-motion";
 import PhoneComponent from "./PhoneComponent";
+import { Link } from "react-router-dom";
 function LandingIntro() {
   return (
     <div className={"wrapper"}>
@@ -38,7 +39,9 @@ function LandingIntro() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.75 }}
         >
-          <Button text="Dashboard" />
+          <Link to="/dashboard">
+            <Button text="Dashboard" />
+          </Link>
           <Button text="Share" outlined={true} />
         </motion.div>
       </div>
