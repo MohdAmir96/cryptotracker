@@ -2,6 +2,7 @@ import { useState } from "react";
 import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export default function MobileDrawer() {
   const [open, setOpen] = useState(false);
@@ -15,15 +16,15 @@ export default function MobileDrawer() {
       />
       <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
         <div className="drawer">
-          <a href="/">
+          <Link to="/">
             <p className="link">Home</p>
-          </a>
-          <a href="/compare">
+          </Link>
+          <Link to="/compare">
             <p className="link">Compare</p>
-          </a>
-          <a href="/dashboard">
+          </Link>
+          <Link to="/dashboard">
             <p className="link">Dashboard</p>
-          </a>
+          </Link>
         </div>
       </Drawer>
     </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import MobileDrawer from "./Drawer";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Header() {
@@ -10,15 +11,15 @@ function Header() {
         CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
       </h1>
       <div className="links">
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link to="/dashboard">
           <Button text="dashboard" />
-        </a>
+        </Link>
       </div>
       <MobileDrawer />
     </div>
