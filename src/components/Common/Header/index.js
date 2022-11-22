@@ -2,25 +2,25 @@ import React from "react";
 import Button from "../Button/Button";
 import MobileDrawer from "./Drawer";
 import "./styles.css";
-
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="navbar">
       <h1 className="heading">
-        <a href="/">
+        <Link to="/">
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-        </a>
+        </Link>
       </h1>
       <div className="links">
-        <a href="/">
+        <Link to="/">
           <p className="link">Home</p>
-        </a>
-        <a href="/compare">
+        </Link>
+        <Link to="/compare">
           <p className="link">Compare</p>
-        </a>
-        <a href="/dashboard">
+        </Link>
+        <Link href="/dashboard">
           <Button text="dashboard" />
-        </a>
+        </Link>
       </div>
       <MobileDrawer />
     </div>
