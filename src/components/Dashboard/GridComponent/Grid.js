@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 function Grid({ coin, delay }) {
   return (
-    <Link to={`/coin/${coin.id}`}>
+    <Link Link to={`/coin/${coin.id}`}>
       <motion.div
         initial={{ y: 60, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

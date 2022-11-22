@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import "./styles.css";
-import { Link } from "react-router-dom";
+
 import { motion } from "framer-motion";
 import Tooltip from "@mui/material/Tooltip";
 import { convertNumbers } from "../../../functions/convertNumber";
@@ -15,7 +15,7 @@ function List({ coin, delay }) {
   }, []);
 
   return (
-    <Link to={`/coin/${coin.id}`}>
+    <a href={`/coin/${coin.id}`}>
       <motion.tr
         className="list-row"
         initial={{ x: -10, opacity: 0 }}
@@ -90,7 +90,7 @@ function List({ coin, delay }) {
           </Tooltip>
         </td>
       </motion.tr>
-    </Link>
+    </a>
   );
 }
 
