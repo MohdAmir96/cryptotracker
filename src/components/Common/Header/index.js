@@ -18,7 +18,7 @@ function Header() {
         <Link to="/compare">
           <p className="link">Compare</p>
         </Link>
-        <Link href="/dashboard">
+        <Link to="/dashboard">
           <Button text="dashboard" />
         </Link>
       </div>
