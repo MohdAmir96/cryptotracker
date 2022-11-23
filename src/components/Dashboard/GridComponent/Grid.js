@@ -2,11 +2,12 @@ import React from "react";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import "./styles.css";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Grid({ coin, delay }) {
   return (
-    <a href={`/coin/${coin.id}`}>
+    <Link to={`/coin/${coin.id}`}>
       <motion.div
         initial={{ y: 60, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -62,7 +63,7 @@ function Grid({ coin, delay }) {
           </p>
         </div>
       </motion.div>
-    </a>
+    </Link>
   );
 }
 
