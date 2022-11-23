@@ -118,6 +118,9 @@
 }
 
 @media only screen and (max-width: 800px) {
+  .grid-box {
+    padding: 1.5rem;
+  }
   .info-flex {
     width: 80%;
   }
@@ -125,5 +128,14 @@
   .coin-chip {
     min-width: 0px;
     padding: 0.25rem 0.5rem;
+    border-width: 1px;
+  }
+  .icon {
+    border-width: 1px;
+    padding: 0.25rem;
+    font-size: 100% !important;
+  }
+  .chip-flex {
+    gap: 0.5rem;
   }
 }
