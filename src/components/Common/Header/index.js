@@ -1,8 +1,8 @@
 import { Switch } from "@mui/material";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 import MobileDrawer from "./Drawer";
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 function Header() {
@@ -43,9 +43,9 @@ function Header() {
   return (
     <div className="navbar">
       <h1 className="heading">
-        <a href="/">
+        <Link to="/">
           CryptoTracker<span style={{ color: "var(--blue)" }}>.</span>
-        </a>
+        </Link>
       </h1>
       <div className="links">
         <Switch
@@ -54,11 +54,16 @@ function Header() {
             toggleTheme();
           }}
         />
-        <Link to="/">
-          <p className="link">Home</p>
+
+        <Link to="/" className="link">
+          Home
         </Link>
+
         <Link to="/compare">
           <p className="link">Compare</p>
+        </Link>
+        <Link to="/watchlist">
+          <p className="link">Watchlist</p>
         </Link>
         <Link to="/dashboard">
           <Button text="dashboard" />
