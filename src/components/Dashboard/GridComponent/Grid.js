@@ -60,7 +60,7 @@ function Grid({ coin, delay }) {
           </div>
         )}
       </div>
-      <a href={`/coin/${coin.id}`}>
+      <Link to={`/coin/${coin.id}`}>
         <div>
           {coin.price_change_percentage_24h > 0 ? (
             <div className="chip-flex">
@@ -78,8 +78,8 @@ function Grid({ coin, delay }) {
             </div>
           )}
         </div>
-      </a>
-      <a href={`/coin/${coin.id}`}>
+      </Link>
+      <Link to={`/coin/${coin.id}`}>
         <p
           className="coin-price"
           style={{
@@ -91,9 +91,9 @@ function Grid({ coin, delay }) {
         >
           $ {coin.current_price.toLocaleString()}
         </p>
-      </a>
+      </Link>
       <div>
-        <a href={`/coin/${coin.id}`}>
+        <Link to={`/coin/${coin.id}`}>
           <p className="volume-text">
             <strong>Total Volume :</strong> $
             {coin.total_volume.toLocaleString()}
@@ -102,7 +102,7 @@ function Grid({ coin, delay }) {
             <strong>Total Market Cap :</strong> $
             {coin.market_cap.toLocaleString()}
           </p>
-        </a>
+        </Link>
       </div>
     </motion.div>
   );

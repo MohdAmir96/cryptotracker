@@ -55,7 +55,17 @@ function Header() {
           }}
         />
 
-        <Link to="/" className="link">
+        <Link
+          to="/"
+          className="link"
+          style={{
+            color: "var(--grey) !important",
+            cursor: "pointer",
+            fontSize: ".8rem",
+            fontWeight: "600",
+            textDecoration: "none!important",
+          }}
+        >
           Home
         </Link>
 
