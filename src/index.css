@@ -10,20 +10,6 @@
   --red: #f94141;
 }
 
-[data-theme="light"] {
-  --white: #ffffff;
-  --black: #111;
-  --grey: #888;
-  --darkgrey: #1b1b1b;
-}
-
-[data-theme="dark"] {
-  --white: #111;
-  --black: #fff;
-  --grey: #888;
-  --darkgrey: #f3f3f3;
-}
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -35,16 +21,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
   color: var(--white);
 }
 
