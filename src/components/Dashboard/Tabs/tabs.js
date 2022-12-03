@@ -32,23 +32,33 @@ export default function Tabs({ data }) {
   });
 
   return (
-    <div>
+    <div style={{ minHeight: "90vh" }}>
       <ThemeProvider theme={theme}>
         <TabContext value={tabValue}>
           <div>
             <TabList variant="fullWidth" onChange={handleChange}>
-              <Tab label="Grid" value={"grid"} sx={style} />
-              <Tab label="List" value={"list"} sx={style} />
+              <Tab
+                label="Grid"
+                value={"grid"}
+                sx={style}
+                className="tabHeading"
+              />
+              <Tab
+                label="List"
+                value={"list"}
+                sx={style}
+                className="tabHeading"
+              />
             </TabList>
           </div>
-          <TabPanel value={"grid"}>
+          <TabPanel value={"grid"} className="tabPanel">
             <div className="grid-flex">
               {data.map((item, index) => (
                 <Grid coin={item} key={index} delay={(index % 5) * 0.1} />
               ))}
             </div>
           </TabPanel>
-          <TabPanel value={"list"}>
+          <TabPanel value={"list"} className="tabPanel">
             <table className="list-flex">
               {data.map((item, i) => (
                 <List coin={item} key={i} delay={(i % 7) * 0.1} />
