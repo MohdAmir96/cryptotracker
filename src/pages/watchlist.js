@@ -5,7 +5,7 @@ import Header from "../components/Common/Header";
 import TopButton from "../components/Common/TopButton/topButton";
 import Tabs from "../components/Dashboard/Tabs/tabs";
 import { get100Coins } from "../functions/get100Coins";
-
+import { Link } from "react-router-dom";
 function WatchListPage() {
   const watchlist = localStorage.getItem("watchlist")
     ? localStorage.getItem("watchlist").split(",")
@@ -34,7 +34,7 @@ function WatchListPage() {
         {coins.length > 0 ? (
           <Tabs data={coins} />
         ) : (
-          <div style={{ minHeight: "66vh" }}>
+          <div>
             <h1 style={{ textAlign: "center" }}>
               Your watchlist is Currently Empty
             </h1>
@@ -49,9 +49,9 @@ function WatchListPage() {
                 alignItems: "center",
               }}
             >
-              <a href="/dashboard">
+              <Link to="/dashboard">
                 <Button text="Dashboard" />
-              </a>
+              </Link>
             </div>
           </div>
         )}
