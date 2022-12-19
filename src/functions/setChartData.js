@@ -1,7 +1,6 @@
 import { getDate } from "./getDate";
 
 export const setChartDataFunction = (setState, prices1, prices2) => {
-  console.log("prices1", prices1, "prices2", prices2);
   setState({
     labels: prices1?.map((data) => getDate(data[0])),
     datasets: [

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Button from "../Button/Button";
 import MobileDrawer from "./Drawer";
 import "./styles.css";
-import { Link } from "react-router-dom";
+
 function Header() {
   const setDark = () => {
     localStorage.setItem("theme", "dark");
@@ -53,18 +53,18 @@ function Header() {
             toggleTheme();
           }}
         />
-        <Link to="/">
+        <a href="/">
           <p className="link">Home</p>
-        </Link>
-        <Link to="/compare">
+        </a>
+        <a href="/compare">
           <p className="link">Compare</p>
-        </Link>
-        <Link to="/watchlist">
+        </a>
+        <a href="/watchlist">
           <p className="link">Watchlist</p>
-        </Link>
-        <Link to="/dashboard">
+        </a>
+        <a href="/dashboard">
           <Button text="dashboard" />
-        </Link>
+        </a>
       </div>
       <MobileDrawer />
     </div>

@@ -7,7 +7,6 @@ import BookmarkBorderRoundedIcon from "@mui/icons-material/BookmarkBorderRounded
 import BookmarkRoundedIcon from "@mui/icons-material/BookmarkRounded";
 import IconButton from "@mui/material/IconButton";
 import { addToWatchlist, removeFromWatchlist } from "../../../functions";
-import { Link } from "react-router-dom";
 
 function Grid({ coin, delay }) {
   const isWatchlist = localStorage.getItem("watchlist")
@@ -25,15 +24,15 @@ function Grid({ coin, delay }) {
       }`}
     >
       <div className="info-flex">
-        <Link to={`/coin/${coin.id}`}>
+        <a href={`/coin/${coin.id}`}>
           <img src={coin.image} className="coin-logo" />
-        </Link>
-        <Link to={`/coin/${coin.id}`}>
+        </a>
+        <a href={`/coin/${coin.id}`}>
           <div className="name-flex">
             <p className="coin-symbol">{coin.symbol}</p>
             <p className="coin-name">{coin.name}</p>
           </div>
-        </Link>
+        </a>
         {isWatchlist || isAdded ? (
           <div
             className="bookmark-icon-div"
@@ -60,7 +59,7 @@ function Grid({ coin, delay }) {
           </div>
         )}
       </div>
-      <Link to={`/coin/${coin.id}`}>
+      <a href={`/coin/${coin.id}`}>
         <div>
           {coin.price_change_percentage_24h > 0 ? (
             <div className="chip-flex">
@@ -78,8 +77,8 @@ function Grid({ coin, delay }) {
             </div>
           )}
         </div>
-      </Link>
-      <Link to={`/coin/${coin.id}`}>
+      </a>
+      <a href={`/coin/${coin.id}`}>
         <p
           className="coin-price"
           style={{
@@ -91,9 +90,9 @@ function Grid({ coin, delay }) {
         >
           $ {coin.current_price.toLocaleString()}
         </p>
-      </Link>
+      </a>
       <div>
-        <Link to={`/coin/${coin.id}`}>
+        <a href={`/coin/${coin.id}`}>
           <p className="volume-text">
             <strong>Total Volume :</strong> $
             {coin.total_volume.toLocaleString()}
@@ -102,7 +101,7 @@ function Grid({ coin, delay }) {
             <strong>Total Market Cap :</strong> $
             {coin.market_cap.toLocaleString()}
           </p>
-        </Link>
+        </a>
       </div>
     </motion.div>
   );
