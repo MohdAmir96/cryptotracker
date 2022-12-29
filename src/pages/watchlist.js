@@ -34,7 +34,7 @@ function WatchListPage() {
         {coins.length > 0 ? (
           <Tabs data={coins} />
         ) : (
-          <div>
+          <div style={{ minHeight: "66px" }}>
             <h1 style={{ textAlign: "center" }}>
               Your watchlist is Currently Empty
             </h1>
