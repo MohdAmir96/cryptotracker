@@ -1,0 +1,11 @@
+body{
+    padding: 50px;
+}
+.add-todo-btn {
+    color: white;
+    background-color: black;
+    font-weight: 700;
+}
+.add-todo-btn:hover{
+color: black;
+}

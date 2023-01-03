@@ -1,17 +1,13 @@
+import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import DashboardPage from "./pages/dashboard";
+import ToDoList from "./ToDoList";
+import Task from "./Task";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="App">
+      {/* <ToDoList /> */}
+      <Task />
     </div>
   );
 }
