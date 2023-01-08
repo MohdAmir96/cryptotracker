@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  min-height: 90vh;
 }
 
 .bigHeading,
@@ -80,14 +79,11 @@
 
   .wrapper {
     flex-direction: column;
-    min-height: 0vh;
   }
-
   .phone-box {
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-    min-height: 60vh;
   }
   .gradient,
   .phone {

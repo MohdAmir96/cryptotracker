@@ -17,12 +17,4 @@
   .list-flex {
     width: auto;
   }
-  .tabHeading {
-    font-size: 90% !important;
-  }
-}
-@media only screen and (max-width: 600px) {
-  .tabPanel {
-    padding: 0.2rem !important;
-  }
 }
