@@ -15,7 +15,6 @@ import { getDate } from "../functions/getDate";
 
 function CoinPage() {
   const { id } = useParams();
-
   const [coin, setCoin] = useState({});
   const [days, setDays] = useState(120);
   const [loading, setLoading] = useState(true);
@@ -168,7 +167,7 @@ function CoinPage() {
             />
             <LineChart chartData={chartData} options={options} />
           </div>
-          <div className="grey-container" style={{ marginBottom: "2rem" }}>
+          <div className="grey-container">
             <Info name={coin.name} desc={coin.desc} />
           </div>
         </>

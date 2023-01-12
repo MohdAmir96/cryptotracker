@@ -23,7 +23,7 @@ function DashboardPage() {
       return item;
     }
   });
-  console.log("search>>>>", search);
+
   useEffect(() => {
     axios
       .get(DASHBOARD_API_URL)
