@@ -6,7 +6,7 @@
   padding: 0.5rem 1rem;
   justify-content: flex-start;
   align-items: center;
-  color: var(--lightgrey);
+  color: var(--grey);
   gap: 0.5rem;
   border-radius: 3rem;
 }
@@ -14,7 +14,7 @@
 .search-box input {
   width: 100%;
   background-color: var(--darkgrey);
-  color: var(--lightgrey);
+  color: var(--grey) !important;
   font-family: "Inter", sans-serif;
   border: none;
 }
